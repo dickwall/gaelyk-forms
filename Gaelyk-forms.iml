@@ -12,11 +12,10 @@
         <sourceRoots>
           <root url="file://$MODULE_DIR$/src" />
         </sourceRoots>
-        <context-artifact name="locusdevgae:war exploded" />
       </configuration>
       <facet type="google-app-engine" name="Google App Engine">
         <configuration>
-          <sdk-home-path>$MODULE_DIR$/../../../Development/appengine-java-sdk-1.2.8</sdk-home-path>
+          <sdk-home-path>$MODULE_DIR$/../../../Development/appengine-java-sdk-1.2.5</sdk-home-path>
         </configuration>
       </facet>
     </facet>
@@ -29,10 +28,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="groovy-1.6.7" level="application" />
-    <orderEntry type="library" name="groovy-1.7-rc-2" level="application" />
-    <orderEntry type="library" name="AppEngine API" level="project" />
-    <orderEntry type="library" name="Gaelyk" level="project" />
+    <orderEntry type="library" name="lib" level="project" />
   </component>
 </module>
 
