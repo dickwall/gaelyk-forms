@@ -1,0 +1,5 @@
+def ctx = context(scope: scriptScope())
+
+contributor(ctx) {
+    property name: "queue", type: "com.google.appengine.api.labs.taskqueue.Queue"
+}

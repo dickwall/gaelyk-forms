@@ -1,0 +1,29 @@
+// Create context for Groovy script files which names end with groovlet.
+def groovletContext = context(filetypes: ['groovlet', 'gtpl'], scope: scriptScope())
+
+contributor(groovletContext) {
+    property name: 'session', type: 'javax.servlet.http.HttpSession'
+    property name: 'request', type: 'javax.servlet.http.HttpServletRequest'
+    property name: 'response', type: 'javax.servlet.http.HttpServletResponse'
+    property name: 'application', type: 'javax.servlet.ServletContext'
+    property name: 'context', type: 'javax.servlet.ServletContext'
+    property name: 'params', type: 'java.util.LinkedHashMap'
+    property name: 'headers', type: 'java.util.LinkedHashMap'
+    property name: 'html', type: 'groovy.xml.MarkupBuilder'
+    property name: 'out', type: 'java.io.PrintWriter'
+    property name: 'sout', type: 'javax.servlet.ServletOutputStream'
+
+    property name: 'users', type: 'com.google.appengine.api.users.UserService'
+    property name: 'user', type: 'com.google.appengine.api.users.User'
+    property name: 'datastore', type: 'com.google.appengine.api.datastore.DatastoreService'
+    property name: 'memcache', type: 'com.google.appengine.api.memcache.MemcacheService'
+    property name: 'urlFetch', type: 'com.google.appengine.api.urlfetch.URLFetchService'
+    property name: 'mail', type: 'com.google.appengine.api.mail.MailService'
+    property name: 'images', type: 'com.google.appengine.api.images.ImagesService'
+    property name: 'defaultQueue', type: 'com.google.appengine.api.labs.taskqueue.Queue'
+    property name: 'xmpp', type: 'com.google.appengine.api.xmpp.XMPPService'
+
+    method name: 'forward', type: 'void', params: [path: 'java.lang.String']
+    method name: 'include', type: 'void', params: [path: 'java.lang.String']
+    method name: 'redirect', type: 'void', params: [path: 'java.lang.String']
+}

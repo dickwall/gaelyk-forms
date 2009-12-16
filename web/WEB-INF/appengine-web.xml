@@ -1,0 +1,22 @@
+<appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
+    <application>gaelyk-forms</application>
+    
+    <version>1</version>
+
+    <!-- Uncomment this section if you want your application to be able to receive XMPP messages -->
+    <!-- And create a file named jabber.groovy in /WEB-INF/groovy -->
+    <!-- Similarily, if you want to receive incoming emails -->
+    <!-- And create a file named email.groovy in /WEB-INF/groovy -->
+    <!--
+    <inbound-services>
+        <service>xmpp_message</service>
+        <service>mail</service>
+    </inbound-services>
+    -->
+    
+    <static-files>
+        <exclude path="/WEB-INF/**.groovy" />
+        <exclude path="/WEB-INF/**.groovlet" />
+        <exclude path="**.gtpl" />
+    </static-files>
+</appengine-web-app>

@@ -1,0 +1,7 @@
+if (user != null) {
+    response.setContentType("text/plain")
+    out.println("Hi There, " + user.nickname)
+}
+else {
+    redirect users.createLoginURL(request.getRequestURI())
+}

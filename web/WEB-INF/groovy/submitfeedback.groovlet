@@ -1,0 +1,25 @@
+import com.google.appengine.api.datastore.Entity
+
+String name = params.name
+String email = params.email
+String website = params.website
+String comments = params.comment
+
+def errorList = []
+
+if (name.isEmpty()) errorList += "Name field is required"
+if (email.isEmpty()) errorList += "Email address is required"
+
+if (!errorList.isEmpty()) {
+  request.setAttribute("errorList", errorList)
+  forward '/tryform.gtpl'
+}
+else {
+  def newFeedback = new Entity("Feedback")
+  newFeedback.name = name
+  newFeedback.email = email
+  newFeedback.website = website
+  newFeedback.comments = comments
+  newFeedback.save()
+  redirect '/showcomments.groovlet'
+}
