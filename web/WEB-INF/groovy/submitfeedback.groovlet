@@ -1,4 +1,5 @@
 import com.google.appengine.api.datastore.Entity
+import gaelykforms.FormElements
 
 String name = params.name
 String email = params.email
@@ -6,12 +7,19 @@ String website = params.website
 String comments = params.comment
 
 def errorList = []
+def errorFields = []
 
-if (name.isEmpty()) errorList += "Name field is required"
-if (email.isEmpty()) errorList += "Email address is required"
+def addError = {field, error ->
+  errorList += error
+  errorFields += field
+}
+
+if (name.isEmpty()) addError("name", "Name is required")
+if (email.isEmpty()) addError("email", "Email address is required")
 
 if (!errorList.isEmpty()) {
   request.setAttribute("errorList", errorList)
+  request.setAttribute("formElements", new FormElements(params, errorFields))
   forward '/tryform.gtpl'
 }
 else {

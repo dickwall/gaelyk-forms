@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Gaelyk-forms:Web">
+    <output-path>$PROJECT_DIR$/out/artifacts/Gaelyk_forms_Web</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Gaelyk-forms/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="javaee-facet-classes" facet="Gaelyk-forms/web/Web" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

@@ -87,3 +87,12 @@ div.row {
 	color: #5A698B;
 	margin: 4px 0 5px 8px;
 }
+
+.fielderror {
+    border: 1px solid #FF0000;
+    margin: 5px 0 6px 9px;
+    padding-left: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+}

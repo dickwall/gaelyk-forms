@@ -9,9 +9,7 @@
         <webroots>
           <root url="file://$MODULE_DIR$/web" relative="/" />
         </webroots>
-        <sourceRoots>
-          <root url="file://$MODULE_DIR$/src" />
-        </sourceRoots>
+        <context-artifact name="Gaelyk-forms:Web" />
       </configuration>
       <facet type="google-app-engine" name="Google App Engine">
         <configuration>
@@ -29,6 +27,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="lib" level="project" />
+    <orderEntry type="library" name="Servlet" level="application" />
   </component>
 </module>
 

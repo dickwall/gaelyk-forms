@@ -1,1 +1,7 @@
+import gaelykforms.FormElements
+
+params.website="http://"
+def formElements = new FormElements(params)
+request.setAttribute("formElements", formElements)
+
 forward '/tryform.gtpl'
